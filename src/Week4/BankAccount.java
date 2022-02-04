@@ -2,19 +2,34 @@ package Week4;
 
 public class BankAccount {
 
+    private static int nextId = 100;
+
     // Attributes
-    private Person owner;
+    private static int numberOfAccounts = 0;
+    private String owner;
     private double balance;
     private int accountNumber;
 
     // Constructor
-    public BankAccount(Person owner, int accountNumber) {
+    public BankAccount(String owner) {
         this.owner = owner;
         this.balance = 0;
-        this.accountNumber = accountNumber;
+        this.accountNumber = nextId++;
+        numberOfAccounts += 1;
+    }
+
+    public BankAccount(String owner, int accountNumber, double money) {
+        this.owner = owner;
+        this.balance = money;
+        this.accountNumber = nextId++;
+        numberOfAccounts += 1;
     }
 
     // other methods
+    public static int getNumberOfAccounts(){
+        return numberOfAccounts;
+    }
+
     public void deposit(double amount){
         balance += amount;
     }

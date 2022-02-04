@@ -5,11 +5,14 @@ public class Pet {
     private String type;
     private String name;
     private int petting_times;
+    private static int numberOfPets = 0;
+
     // Constructor
     public Pet(String type, String name, int petting_times) {
         this.type = type;
         this.name = name;
         this.petting_times = petting_times;
+        numberOfPets += 1;
     }
     // Other methods
     public void petThePet (int times){
@@ -20,6 +23,9 @@ public class Pet {
     }
     public void sameName(String x) {
         System.out.println("This is a String " + x);
+    }
+    public static int getNumberOfPets(){
+        return numberOfPets;
     }
 
     // Print method
