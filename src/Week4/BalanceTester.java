@@ -11,5 +11,9 @@ public class BalanceTester {
         BankAccount person4 = new BankAccount("Person 4");
         System.out.println(person4);
         System.out.println(BankAccount.getNumberOfAccounts());
+        BankAccount person5 = person2.copy();
+        person5.deposit(500.65);
+        System.out.println(person2);
+        System.out.println(person5);
     }
 }
