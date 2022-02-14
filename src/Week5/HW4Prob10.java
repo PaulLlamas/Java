@@ -3,12 +3,11 @@ package Week5;
 public class HW4Prob10 {
 
     public static double percentOf(int withPer, double number){
-       double output = (withPer / 100.0 * number);
-       return output;
+        return (withPer / 100.0 * number);
     }
 
     public static double findPercent(double first, double second){
-        double output = (first / second * 100);
+        double output = first / second * 100;
         return output;
     }
 
