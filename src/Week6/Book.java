@@ -6,7 +6,7 @@ private String author;
 private double price;
 private String title;
 
-    public Book(String author, String title, double price){
+    public Book(String author, double price, String title){
         this.author = author;
         this.title = title;
         this.price = price;
@@ -18,6 +18,10 @@ private String title;
 
     public void changePrice(double newPrice){
         this.price = newPrice;
+    }
+
+    public String doSomething(){
+        return "Book is 0";
     }
 
     public String toString(){

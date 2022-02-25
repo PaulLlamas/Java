@@ -1,6 +1,6 @@
-package Week6;
+package week7;
 
-public class SavingsAccount extends BankAccount{
+public class SavingsAccount extends BankAccount {
 
     private double interestRate;
 

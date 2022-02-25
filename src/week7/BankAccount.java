@@ -1,6 +1,6 @@
-package Week6;
+package week7;
 
-public class BankAccount {
+public class BankAccount implements Comparable<BankAccount>{
 
     private static int nextId = 100;
 
@@ -50,6 +50,23 @@ public class BankAccount {
     }
 
     public BankAccount copy() {return new BankAccount(owner, accountNumber, balance);}
+
+//    public int compareTo(BankAccount other){
+//        if(this.accountNumber < other.accountNumber) return -1;
+//        else if(this.accountNumber > other.accountNumber) return 1;
+//        else return 0;
+////        return accountNumber - other.accountNumber;
+//    }
+    public int compareTo(BankAccount other){
+        if(owner.compareTo(other.owner) == 0){
+            if(this.balance < other.balance) return -1;
+            else if(this.balance > other.balance) return 1;
+            else return 0;
+//            return (int) (this.balance - other.balance);
+        } else {
+            return owner.compareTo(other.owner);
+        }
+    }
 
     //Print
 
