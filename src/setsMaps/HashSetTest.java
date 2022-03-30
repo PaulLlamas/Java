@@ -3,13 +3,14 @@ package setsMaps;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class HashSetTest {
 
 	public static void main(String[] args) {
 		// First set up a hash set
 		
-		Set<String> names = new HashSet<>();
+		Set<String> names = new TreeSet<>();
 		names.add("Cory");
 		names.add("Bob");
 		names.add("Aiden");
