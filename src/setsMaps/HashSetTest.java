@@ -10,7 +10,7 @@ public class HashSetTest {
 	public static void main(String[] args) {
 		// First set up a hash set
 		
-		Set<String> names = new TreeSet<>();
+		Set<String> names = new TreeSet<>(); // HashSet<>();
 		names.add("Cory");
 		names.add("Bob");
 		names.add("Aiden");
