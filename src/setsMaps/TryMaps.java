@@ -17,30 +17,29 @@ public class TryMaps {
 		test.put("C",3);
 		System.out.println(test);
 
-//
-//        //System.out.println(test.get("B"));
-//
-//		for (String key : test.keySet())
-//			System.out.println(key + " " + test.get(key));
-//
-//        Iterator it = test.entrySet().iterator();
-//        while (it.hasNext()) {
-//            Map.Entry pair = (Map.Entry) it.next();
-//            System.out.println(pair.getKey() + " = " + pair.getValue());
-//        }
-////
-//		test.remove("A");
-////		System.out.println(test);
-////
-//		test.put("A", 8);
-//		System.out.println(test); // order of elements not guaranteed
-////
-//        System.out.println(test.get("B") + test.get("C"));
-////
-////     System.out.println(test.get("D")); // result is null
-////
-//         System.out.println(test.get(2));
-////     // result is null - not an error, even though 5 is the wrong key type!
+        System.out.println(test.get("B"));
+
+		for (String key : test.keySet())
+			System.out.println(key + " " + test.get(key));
+
+        Iterator it = test.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            System.out.println(pair.getKey() + " = " + pair.getValue());
+        }
+
+		test.remove("A");
+		System.out.println(test);
+
+		test.put("A", 8);
+		System.out.println(test); // order of elements not guaranteed
+
+        System.out.println(test.get("B") + test.get("C"));
+
+     System.out.println(test.get("D")); // result is null
+
+         System.out.println(test.get(2));
+     // result is null - not an error, even though 5 is the wrong key type!
 ////
 ////        System.out.println(test.get("B") + test.get("D")); // run-time error
 ////
