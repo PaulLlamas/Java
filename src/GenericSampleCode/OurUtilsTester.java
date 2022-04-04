@@ -12,18 +12,21 @@ public class OurUtilsTester {
         OurUtils.printStrings (array1);
         OurUtils.print(array1);
 //
-//      OurUtils.print(array2);
+      OurUtils.print(array2);
 //
 
 //
-        NCBankAccount[] bankArray = {new NCBankAccount("Marschall", 100), new NCBankAccount("Suzy", 500), new NCBankAccount("Ted", 250)};
-//        OurUtils.print(bankArray);
+        NCBankAccount[] bankArray = {new NCBankAccount("Marschall", 100),
+                new NCBankAccount("Suzy", 500),
+                new NCBankAccount("Ted", 250)};
+        OurUtils.print(bankArray);
 
 // find minimums
-//        System.out.println(OurUtils.minInteger(array2));
-//        System.out.println (OurUtils.min(array2));
+        System.out.println(OurUtils.minDouble(array2));
+        System.out.println(OurUtils.min(array2));
+        System.out.println(OurUtils.min(array1));
 
-//        System.out.println (OurUtils.min(bankArray));
+        System.out.println (OurUtils.min(bankArray));
 
 
     }

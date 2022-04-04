@@ -9,18 +9,22 @@ public class OurUtils {
    public static void printStrings(String[] array) {
        for (String item : array)
            System.out.print (item + " ");
-       System.out.println ();
+       System.out.println();
    }
 
     public static <E> void print(E[] array) {
         for (E item : array)
             System.out.print (item + " ");
-        System.out.println ();
+        System.out.println();
     }
 
     //Remember how to find the minimum
-    public static int minInteger(Double[] array) {
-       return 0;
+    public static double minDouble(Double[] array) {
+       double minimum = array[0];
+       for(int i = 1; i < array.length; i++){
+           if(minimum > array[i]) minimum = array[i];
+       }
+       return minimum;
     }
 
     public static <E extends Comparable<E>> E min(E[] array) {
