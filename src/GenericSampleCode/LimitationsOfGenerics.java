@@ -13,14 +13,15 @@ public class LimitationsOfGenerics<T>{
     private T[] array;
     private ArrayList<T> lst;
 
-    public LimitationsOfGenerics() {
+    public LimitationsOfGenerics(T[] temp) {
 //        array = new T[10];   //can't do this
-//          lst = new ArrayList<>();
+        array = temp;
+        lst = new ArrayList<>();
     }
 
     public static <E> E[] fillWtihDefaults(E[] array, E defaultValue) {
         for (int index = 0; index < array.length; index++) {
-            //array[index] = new E();  //can't do this
+//            array[index] = new E();  //can't do this
             array[index] = defaultValue;
         }
         return array;
