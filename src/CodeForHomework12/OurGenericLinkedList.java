@@ -4,7 +4,7 @@ package CodeForHomework12;
 
 public class OurGenericLinkedList {
     //instance variable
-    private Node firstNode;
+    private GenericNode firstNode;
 
 
     //Constructor
@@ -16,13 +16,13 @@ public class OurGenericLinkedList {
     //addNode
     public void addNode(int value) {
         //create new Node and then decide where it goes
-        Node newNode = new Node(value);
+        GenericNode newNode = new GenericNode(value);
         //If empty create first node
         if (firstNode == null) {
             firstNode = newNode;
         } else {
             //not first node so get to the end of the list
-            Node currentNode = firstNode;
+            GenericNode currentNode = firstNode;
             while(currentNode.getLink() != null) {
                 currentNode = currentNode.getLink();
             }
@@ -33,7 +33,7 @@ public class OurGenericLinkedList {
 
     public int getValue(int position) {
         int currentPos=0;
-        Node currentNode = firstNode;
+        GenericNode<Integer> currentNode = firstNode;
         while (currentPos < position && currentNode != null) {
             currentNode = currentNode.getLink();
             currentPos++;
@@ -46,7 +46,7 @@ public class OurGenericLinkedList {
 
     public int size() {
         int count = 0;
-        Node currentNode = firstNode;
+        GenericNode currentNode = firstNode;
         while (currentNode != null) {
             count++;
             currentNode = currentNode.getLink();
@@ -56,13 +56,13 @@ public class OurGenericLinkedList {
 
     //insert
     public void insert(int position, int value) {
-        Node newNode = new Node(value);
+        GenericNode newNode = new GenericNode(value);
         //Put at the beginning if position <= 0
         if (position <= 0) {
             newNode.setLink(firstNode);
             firstNode = newNode;
         } else  {
-            Node currentNode = firstNode;
+            GenericNode currentNode = firstNode;
             int currentPos = 0;
             while (currentPos < position - 1 && currentNode.getLink() != null) {
                 currentNode = currentNode.getLink();
@@ -78,7 +78,7 @@ public class OurGenericLinkedList {
     //toString
     public String toString() {
         String out = "";
-        Node currentNode = firstNode;
+        GenericNode currentNode = firstNode;
         while (currentNode != null) {
             out = out + currentNode.getValue() + " ";
             currentNode = currentNode.getLink();
