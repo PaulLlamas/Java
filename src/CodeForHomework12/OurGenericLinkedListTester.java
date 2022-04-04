@@ -9,7 +9,7 @@ public class OurGenericLinkedListTester {
 
 
         // create and test a linked list
-        OurGenericLinkedList<Integer> list = new OurGenericLinkedList();
+        OurGenericLinkedList list = new OurGenericLinkedList();
         System.out.println("list is " + list);
 
 
