@@ -85,16 +85,16 @@ public class TryMaps {
 //		System.out.println(linkedHashmap);  // Order has changed: fish is last
 ////
 ////     //TreeMap keeps the keys in sorted order (alphabetical for strings). It does so efficiently, using a binary search tree.
-//    Map<String, Integer> treemap = new TreeMap<>();
-//		treemap.put("dog", 4);
-//		treemap.put("cat", 4);
-//		treemap.put("fish", 0);
-//		treemap.put("bird", 2);
-//		treemap.put("spider", 8);
-//		System.out.println(treemap);  // Keys are in alphabetical order.
-//
-//		treemap.remove("fish");
-//		treemap.put("fish", 0);
-//		System.out.println(treemap);  // Order has NOT changed.
+    Map<String, Integer> treemap = new TreeMap<>();
+		treemap.put("dog", 4);
+		treemap.put("cat", 4);
+		treemap.put("fish", 0);
+		treemap.put("bird", 2);
+		treemap.put("spider", 8);
+		System.out.println(treemap);  // Keys are in alphabetical order.
+
+		treemap.remove("fish");
+		treemap.put("fish", 0);
+		System.out.println(treemap);  // Order has NOT changed.
     }
 }

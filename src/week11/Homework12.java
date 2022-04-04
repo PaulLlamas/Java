@@ -35,7 +35,13 @@ public class Homework12 {
         test.remove(inside2);
 
         System.out.println(test);
-
+//
+//        Map<String, Integer> test = new HashMap<String, Integer>();
+//        test.put("A", 1);
+//        test.put("B", 2);
+//        test.put("A", 2);
+//        test.put("C", 3);
+//
 //        Set<String> keySet = test.keySet();
 //        for (String key : keySet) {
 //            System.out.println("key is " + key + " value is " + test.get(key));
