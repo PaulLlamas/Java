@@ -1,0 +1,7 @@
+Map<Key,Value> HashMap, TreeMap
+Stack<> Last In First Out
+Set<> HashSet, TreeSet
+Queue<> First In First Out
+ArrayList<>
+LinkedList<>
+Array[]
