@@ -14,27 +14,28 @@ public class SortingInJava
 		final Integer[] mixedOrder = {3, -55, -7, 7, 0, -2, 54, 7}; 
 //
 //		// Increasing order is the default.
-//		List<Integer> increasingOrder = new ArrayList<>(Arrays.asList(mixedOrder));
-//		Collections.sort(increasingOrder);
-//		System.out.println(increasingOrder);
+		List<Integer> increasingOrder = new ArrayList<>(Arrays.asList(mixedOrder));
+		Collections.sort(increasingOrder);
+		System.out.println(increasingOrder);
 //
 //		// Obtain decreasing order using Collections.reverseOrder.
-//		List<Integer> decreasingOrder = new ArrayList<>(Arrays.asList(mixedOrder));
-//		Collections.sort(decreasingOrder, Collections.reverseOrder());
-//		System.out.println(decreasingOrder);
+		List<Integer> decreasingOrder = new ArrayList<>(Arrays.asList(mixedOrder));
+		Collections.sort(decreasingOrder, Collections.reverseOrder());
+		System.out.println(decreasingOrder);
 //
 //		// Even numbers before odd numbers.
-//		List<Integer> evensFirst = new ArrayList<>(Arrays.asList(mixedOrder));
-//		Collections.sort(evensFirst, (a,b) -> { if (a % 2 != 0 && b % 2 == 0) return 1; else return -1; });
-//		System.out.println(evensFirst);
+		List<Integer> evensFirst = new ArrayList<>(Arrays.asList(mixedOrder));
+		Collections.sort(evensFirst, (a,b) -> { if (a % 2 != 0 && b % 2 == 0)
+			return 1;else return -1; });
+		System.out.println(evensFirst);
 //
 //		// Even numbers in INCREASING order, followed by odd numbers in DECREASING order.
-//		List<Integer> evensIncreasingOdddsDecreasing = new ArrayList<>(Arrays.asList(mixedOrder));
-//		Collections.sort(evensIncreasingOdddsDecreasing,
-//				(a,b) -> { if ((a % 2 != 0 && b % 2 == 0) ||
-//					           (a % 2 == 0 && b % 2 == 0 && a > b) ||
-//					           (a % 2 != 0 && b % 2 != 0 && a < b)) return 1; else return -1; });
-//		System.out.println(evensIncreasingOdddsDecreasing);
+		List<Integer> evensIncreasingOdddsDecreasing = new ArrayList<>(Arrays.asList(mixedOrder));
+		Collections.sort(evensIncreasingOdddsDecreasing,
+				(a,b) -> { if ((a % 2 != 0 && b % 2 == 0) ||
+					           (a % 2 == 0 && b % 2 == 0 && a > b) ||
+					           (a % 2 != 0 && b % 2 != 0 && a < b)) return 1; else return -1; });
+		System.out.println(evensIncreasingOdddsDecreasing);
 //
 //		// Arrays or Array-lists of objects are sorted using the compareTo function of the class.
 //

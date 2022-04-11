@@ -1,7 +1,7 @@
 Map<Key,Value> HashMap, TreeMap
 Stack<> Last In First Out
-Set<> HashSet, TreeSet
-Queue<> First In First Out
-ArrayList<>
-LinkedList<>
-Array[]
+Set<> No duplicates HashSet, TreeSet
+Queue<> First In First Out (FIFO)
+ArrayList<> ordered as added or inserted to stated index
+LinkedList<> Nodes linked by reference, good for insertions and deletions
+Array[] - Not generic, size is fixed, based on index - oldest

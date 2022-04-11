@@ -8,10 +8,10 @@ class BankAccount implements Comparable<BankAccount>
 	   private double balance;
 	   private String owner;
 
-	   public BankAccount(String owner)
+	   public BankAccount(String owner, double balance)
 	   {
 		   this.owner = owner;
-		   this.balance = 0;
+		   this.balance = balance;
 	   }
 
 	   public void deposit(double amount)
@@ -27,21 +27,25 @@ class BankAccount implements Comparable<BankAccount>
 				   " but balance was insufficient: " + this.balance);
 	   }
 
-	   public int compareTo(BankAccount account)
-	   { // Compare accounts using their owner's name - simpler version.
-		return this.owner.compareTo(account.owner);
+//	   public int compareTo(BankAccount account)
+//	   { // Compare accounts using their owner's name - simpler version.
+//		return this.owner.compareTo(account.owner);
+//	   }
+
+       public int compareTo(BankAccount account)
+	   { // Compare bank-accounts by their balance,
+	     // and if the balance is the same then compare by owner's name.
+	   	if (this.balance > account.balance)
+	   	    return -1; // NOTE: Larger balances BEFORE smaller balances
+	   	else if (this.balance < account.balance)
+	   	    return 1;
+	   	else  // Balances are equal; compare owners.
+	   	    return this.owner.compareTo(account.owner);
 	   }
 
-//       public int compareTo(BankAccount account)
-//	   { // Compare bank-accounts by their balance,
-//	     // and if the balance is the same then compare by owner's name.
-//	   	if (this.balance > account.balance)
-//	   	    return 1; // NOTE: Larger balances BEFORE smaller balances
-//	   	else if (this.balance < account.balance)
-//	   	    return -1;
-//	   	else  // Balances are equal; compare owners.
-//	   	    return this.owner.compareTo(account.owner);
-//	   }
+	   public String getOwner(){
+	   	return owner;
+	   }
 
 	   // If you want to compare objects in two different ways in the same program, you need
 	   // separate comparison functions, as shown below. The comparison function is used 
