@@ -21,7 +21,7 @@ public class ReadFromFile {
         // Try reading from a file
        try{
 
-        File reader = new File("multidimensionalArrays/test.txt");
+        File reader = new File("test.txt");
         Scanner in = new Scanner(reader);
         String word = "";
 
