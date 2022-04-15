@@ -19,13 +19,11 @@ public class GenericNode<T> {
 
     //set Node
     public void setLink(GenericNode<T> newNode) {
-
         nextNode = newNode;
     }
 
     //return the node
     public GenericNode<T> getLink() {
-
         return nextNode;
     }
 
