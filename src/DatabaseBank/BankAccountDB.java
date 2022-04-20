@@ -94,10 +94,18 @@ public class BankAccountDB {
 
 	
 	//withdrawal
-	public void withdraw(double amount)
-	{
+	public void withdraw(double amount) {
 //		if (balance > amount)
 //			balance -= amount;
+		try {
+			if(getBalance() >= amount) {
+				String query = "UPDATE Accounts Set Balance = Balance -" + amount;
+				query = query + "WHERE Account_Num = " + accountNum;
+				db.updateData(query);
+			}
+		} catch (Exception e){
+			System.out.println("Not enough funds: " + e);
+		}
 	}
 
 	//Return the balance
